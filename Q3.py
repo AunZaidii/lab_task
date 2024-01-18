@@ -1,16 +1,13 @@
-best_dishes_set = set()
-
-num_dishes = int(input("Enter the number of best dishes: "))
-for i in range(num_dishes):
-    dish_name = input(f"Enter the name of the {i+1}st dish: ")
-    best_dishes_set.add(dish_name)
-
-print("Set of best dishes:", best_dishes_set)
-
-while best_dishes_set:
-    popped_dish = best_dishes_set.pop()
-    print(f"Popped dish: {popped_dish}")
-    print(f"Remaining dishes: {best_dishes_set}")
-
-print("Updated set of best dishes:", best_dishes_set)
-
+import os
+def duplicate(filename):
+    f=open(filename,"r")
+    content=f.read()
+    f.close()
+    word_list=content.split()
+    for i in range(len(word_list)):
+        if word_list[i] in word_list[i+1:]:
+            print(True)
+            break
+    else:
+        print(False)
+duplicate('C:\programming.txt')
