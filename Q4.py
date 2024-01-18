@@ -1,5 +1,26 @@
-# Q4. A car with tires 50 cm in diameter travels 10 meters in 1 second. What is the angular speed?
-d = 50/100
-r = d/2
-v = 10/1
-print("For radius",r,"m and linear velocity",v,"m/s, the magnitude of angular velocity will be",v/r,"rad/s")
+monthsL = ['Jan', 'Feb', 'Mar', 'May']
+monthsL.insert(3, 'Apr')
+
+monthsT = ('Jan', 'Feb', 'Mar', 'May') 
+
+monthsL.append('Jun')
+monthsT = monthsT + ('Jun',)
+
+popped_element_L = monthsL.pop()
+
+del monthsL[1]
+monthsT = monthsT[:1] + monthsT[2:]
+
+monthsL.reverse()
+monthsT = tuple(reversed(monthsT))
+
+print("List after inserting 'Apr':", monthsL)
+print("Tuple after attempting to insert 'Apr':", monthsT)
+print("List after appending 'Jun':", monthsL)
+print("Tuple after appending 'Jun':", monthsT)
+print("Popped element from the list:", popped_element_L)
+print("List after removing the second item:", monthsL)
+print("Tuple after attempting to remove the second item:", monthsT)
+print("List after reversing:", monthsL)
+print("Tuple after reversing:", monthsT)
+
