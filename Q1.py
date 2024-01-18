@@ -1,10 +1,23 @@
-sample = [(2, 3), (4, 7), (8, 11), (3, 6)]
+family = {
+    'Parents': {
+        'Father': 'Asad',
+        'Mother': 'Huma',
+    },
+    'Siblings':{
+    'name':['Hur','Farwa'],
+    'relationship':['brother and sister']
+    },
+}
 
-element_position = 1
-#here will be two element positions 0 and 1
-min_value = min(sample, key=lambda x: x[element_position])
-max_value = max(sample, key=lambda x: x[element_position])
+family.update({
+    'grandparents':{
+        'maternal':['Yousuf','Salma'],
+        'paternal':['Hasan','Talat']
+    },
+    'uncles_and_aunts':{
+        "maternal":['navaid','Farhan'],
+        'paternal':['Mubashir','Haider','Abid']
+    }        
+})
 
-print(f"Minimum value at position {element_position}:", min_value[element_position])
-print(f"Maximum value at position {element_position}:", max_value[element_position])
-
+print(family)
