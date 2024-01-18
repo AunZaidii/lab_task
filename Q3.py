@@ -1,15 +1,13 @@
-lst = [5, 2, 8, 1, 7, 3]
 
-middle_index = len(lst) // 2
+expr_a = len("anachronistically") == len("counterintuitive") + 1
 
-middle_element = lst[middle_index]
+expr_b = "misinterpretation" < "misrepresentation"
 
-first_number = lst.pop(0)
-lst.append(first_number)
+expr_c = 'e' not in "floccinaucinihilipilification"
 
+expr_d = len("counterrevolution") == len("counter") + len("resolution")
 
-print(f"Index of the middle element: {middle_index}")
-print(f"Middle element of lst: {middle_element}")
-print(f"Sorted list in descending order: {lst}")
-print(f"List after moving the first number to the end:", lst)
-
+print("(a) Expression result:", expr_a)
+print("(b) Expression result:", expr_b)
+print("(c) Expression result:", expr_c)
+print("(d) Expression result:", expr_d)

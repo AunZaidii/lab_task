@@ -1,11 +1,10 @@
-lst = [2, 1, 3, 5, 4, 3, 8]
-lst.remove(3)
-print(lst)
-lst.sort()
-print(lst)
-lst.insert(2,6)
-print(lst)
-lst.pop(3)
-print(lst)
-lst.extend([10,7,9])
-print(lst)
+sample = [(2, 3), (4, 7), (8, 11), (3, 6)]
+
+element_position = 1
+#here will be two element positions 0 and 1
+min_value = min(sample, key=lambda x: x[element_position])
+max_value = max(sample, key=lambda x: x[element_position])
+
+print(f"Minimum value at position {element_position}:", min_value[element_position])
+print(f"Maximum value at position {element_position}:", max_value[element_position])
+

@@ -1,22 +1,13 @@
-a = 6
-b = 7
-
-c = (a + b) / 2
-
-inventory = ['paper', 'staples', 'pencils']
-
-first = 'John'
-middle = 'Fitzgerald'
-last = 'Kennedy'
-
-full_name = first + ' ' + middle + ' ' + last
-
-print("Variable a:", a)
-print("Variable b:", b)
-print("Variable c:", c)
-print("Variable inventory:", inventory)
-print("Variable first:", first)
-print("Variable middle:", middle)
-print("Variable last:", last)
-print("Variable full_name:", full_name)
+monthsL = ['Jan', 'Feb', 'Mar', 'May']
+monthsT = ('Jan', 'Feb', 'Mar', 'May')
+monthsL.insert(3, 'Apr')
+monthsL.append('Jun')
+popped_element_L = monthsL.pop()
+del monthsL[1]
+monthsL.reverse()
+print("(a) List after inserting 'Apr':", monthsL)
+print("(b) List after appending 'Jun':", monthsL)
+print("(c) Popped element from the list:", popped_element_L)
+print("(d) List after removing the second item:", monthsL)
+print("(e) List after reversing:", monthsL)
 

@@ -1,26 +1,8 @@
-monthsL = ['Jan', 'Feb', 'Mar', 'May']
-monthsL.insert(3, 'Apr')
+provinces_tuple = ()
+num_provinces = int(input("Enter the number of provinces: "))
 
-monthsT = ('Jan', 'Feb', 'Mar', 'May') 
-
-monthsL.append('Jun')
-monthsT = monthsT + ('Jun',)
-
-popped_element_L = monthsL.pop()
-
-del monthsL[1]
-monthsT = monthsT[:1] + monthsT[2:]
-
-monthsL.reverse()
-monthsT = tuple(reversed(monthsT))
-
-print("List after inserting 'Apr':", monthsL)
-print("Tuple after attempting to insert 'Apr':", monthsT)
-print("List after appending 'Jun':", monthsL)
-print("Tuple after appending 'Jun':", monthsT)
-print("Popped element from the list:", popped_element_L)
-print("List after removing the second item:", monthsL)
-print("Tuple after attempting to remove the second item:", monthsT)
-print("List after reversing:", monthsL)
-print("Tuple after reversing:", monthsT)
+for i in range(num_provinces):
+    province_name = input(f"Enter the name of province {i+1}: ")
+    provinces_tuple += (province_name,)
+print("Provinces Tuple:", provinces_tuple)
 
