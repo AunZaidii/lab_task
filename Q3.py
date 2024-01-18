@@ -1,10 +1,16 @@
-def hexASCII():
-    lowercase_alphabet = 'abcdefghijklmnopqrstuvwxyz'
+best_dishes_set = set()
 
-    for char in lowercase_alphabet:
-        ascii_code = ord(char)
-        hex_representation = format(ascii_code, 'x')
-        print(f"{char}: {hex_representation}", end=" ")
+num_dishes = int(input("Enter the number of best dishes: "))
+for i in range(num_dishes):
+    dish_name = input(f"Enter the name of the {i+1}st dish: ")
+    best_dishes_set.add(dish_name)
 
-# Call the function to print the correspondence
-hexASCII()
+print("Set of best dishes:", best_dishes_set)
+
+while best_dishes_set:
+    popped_dish = best_dishes_set.pop()
+    print(f"Popped dish: {popped_dish}")
+    print(f"Remaining dishes: {best_dishes_set}")
+
+print("Updated set of best dishes:", best_dishes_set)
+
