@@ -1,21 +1,11 @@
-import os
-def Distribution(filename):
-    try:
-        with open(filename, "r") as file:
-            content = file.read()
-
-        grades_list = content.split(" ")
-        grade_distribution = {}
-        grade_categories = ["A", "A-", "B+", "B", "B-", "C", "C-", "F"]
-
-        for category in grade_categories:
-            grade_distribution[category] = grades_list.count(category)
-
-        for grade, count in grade_distribution.items():
-            print(f"Number of students who received {grade}: {count}")
-
-    except FileNotFoundError:
-        print(f"File '{filename}' not found.")
-
-Distribution("C:\programming1.txt")
-
+import math
+dartboard_radius = 10
+dart_coordinates = [
+    (0, 0),  # (a)
+    (10, 10),  # (b)
+    (6, 6),  # (c)
+    (7, 8)   # (d)
+]
+for x, y in dart_coordinates:
+    is_within_dartboard = math.sqrt(x**2 + y**2) <= dartboard_radius
+    print(f"Dart hit at ({x}, {y}) is within the dartboard: {is_within_dartboard}")

@@ -1,13 +1,8 @@
-import os
-def abc(filename):
-    f = open(filename,"r+")
-    content = f.read()
-    f.close()
-    f1 = open('D:\\er.txt', "a")
-    word_list=content.split()
-    for i in range(len(word_list)):
-        if len(word_list[i]) == 4:
-            word_list[i] = "XXXX"
-    f1.write(" ".join(word_list))
-    f1.close()
-abc('D:\\programming2.txt')
+provinces_tuple = ()
+num_provinces = int(input("Enter the number of provinces: "))
+
+for i in range(num_provinces):
+    province_name = input(f"Enter the name of province {i+1}: ")
+    provinces_tuple += (province_name,)
+print("Provinces Tuple:", provinces_tuple)
+

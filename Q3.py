@@ -1,13 +1,13 @@
-import os
-def duplicate(filename):
-    f=open(filename,"r")
-    content=f.read()
-    f.close()
-    word_list=content.split()
-    for i in range(len(word_list)):
-        if word_list[i] in word_list[i+1:]:
-            print(True)
-            break
-    else:
-        print(False)
-duplicate('C:\programming.txt')
+
+expr_a = len("anachronistically") == len("counterintuitive") + 1
+
+expr_b = "misinterpretation" < "misrepresentation"
+
+expr_c = 'e' not in "floccinaucinihilipilification"
+
+expr_d = len("counterrevolution") == len("counter") + len("resolution")
+
+print("(a) Expression result:", expr_a)
+print("(b) Expression result:", expr_b)
+print("(c) Expression result:", expr_c)
+print("(d) Expression result:", expr_d)

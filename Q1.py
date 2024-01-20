@@ -1,20 +1,10 @@
-import os
-def file_statistics(file_name):
-    try:
-        with open(file_name, 'r') as file:
-            content = file.read()
+sample = [(2, 3), (4, 7), (8, 11), (3, 6)]
 
-        line_count = content.count('\n') + 1
-        word_count = len(content.split())
-        character_count = len(content)
+element_position = 1
+#here will be two element positions 0 and 1
+min_value = min(sample, key=lambda x: x[element_position])
+max_value = max(sample, key=lambda x: x[element_position])
 
-        print(f"Statistics for file '{file_name}':")
-        print(f"Line count: {line_count} lines")
-        print(f"Word count: {word_count} words")
-        print(f"Character count: {character_count} characters")
-
-    except FileNotFoundError:
-        print(f"File '{file_name}' not found.")
-
-file_statistics('C:\programming.txt')
+print(f"Minimum value at position {element_position}:", min_value[element_position])
+print(f"Maximum value at position {element_position}:", max_value[element_position])
 

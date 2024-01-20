@@ -1,9 +1,13 @@
-all_players = set(range(1, 41))
-hockey_players = set(range(1, 22))
-both_sports_players = set(range(1, 11))
-cricket_only_players = set(all_players.difference(hockey_players))
+monthsL = ['Jan', 'Feb', 'Mar', 'May']
+monthsT = ('Jan', 'Feb', 'Mar', 'May')
+monthsL.insert(3, 'Apr')
+monthsL.append('Jun')
+popped_element_L = monthsL.pop()
+del monthsL[1]
+monthsL.reverse()
+print("(a) List after inserting 'Apr':", monthsL)
+print("(b) List after appending 'Jun':", monthsL)
+print("(c) Popped element from the list:", popped_element_L)
+print("(d) List after removing the second item:", monthsL)
+print("(e) List after reversing:", monthsL)
 
-print("Total players =", len(all_players))
-print("Players exclusively into hockey =", len(hockey_players.difference(both_sports_players)))
-print("Players exclusively into cricket =", len(cricket_only_players))
-print("Players involved in both sports =", len(both_sports_players))
