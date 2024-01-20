@@ -1,8 +1,24 @@
-provinces_tuple = ()
-num_provinces = int(input("Enter the number of provinces: "))
+your_choice_dishes = {
+    'Spaghetti Bolognese',
+    'Chicken Alfredo',
+    'Margherita Pizza',
+    'Caesar Salad',
+    'Chocolate Cake'
+}
 
-for i in range(num_provinces):
-    province_name = input(f"Enter the name of province {i+1}: ")
-    provinces_tuple += (province_name,)
-print("Provinces Tuple:", provinces_tuple)
+dishes_cooked_in_week = {
+    'Spaghetti Bolognese',
+    'Chicken Alfredo',
+    'Margherita Pizza',
+    'Greek Salad',
+    'Fruit Salad',
+    'Chocolate Cake'
+}
 
+dishes_to_be_cooked = your_choice_dishes.intersection(dishes_cooked_in_week)
+
+print("Dishes to be cooked in the next week based on your choice:")
+for dish in dishes_to_be_cooked:
+    print(f"- {dish}")
+    
+    

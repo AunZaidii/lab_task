@@ -1,13 +1,10 @@
+def hexASCII():
+    lowercase_alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
-expr_a = len("anachronistically") == len("counterintuitive") + 1
+    for char in lowercase_alphabet:
+        ascii_code = ord(char)
+        hex_representation = format(ascii_code, 'x')
+        print(f"{char}: {hex_representation}", end=" ")
 
-expr_b = "misinterpretation" < "misrepresentation"
-
-expr_c = 'e' not in "floccinaucinihilipilification"
-
-expr_d = len("counterrevolution") == len("counter") + len("resolution")
-
-print("(a) Expression result:", expr_a)
-print("(b) Expression result:", expr_b)
-print("(c) Expression result:", expr_c)
-print("(d) Expression result:", expr_d)
+# Call the function to print the correspondence
+hexASCII()
