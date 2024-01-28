@@ -1,24 +1,20 @@
-your_choice_dishes = {
-    'Spaghetti Bolognese',
-    'Chicken Alfredo',
-    'Margherita Pizza',
-    'Caesar Salad',
-    'Chocolate Cake'
-}
+SET_OF_ITEMS = set()
+PRICES = {}
+lst = []
+for i in range(1, 6):
+    item_name = input(f"Name of item {i}: ")
+    SET_OF_ITEMS.add(item_name)
+    print(SET_OF_ITEMS)
+    x = SET_OF_ITEMS.pop()
+    print("Enter price for", x)
+    PRICES[x] = int(input(f"Enter price for {x}: "))
+amount = sum(PRICES.values())
+print("\n*_*_*_*_* BILL *_*_*_*_*")
+print("{:<15}{:<15}".format("SET_OF_ITEMS", "PRICES"))
+for item, price in PRICES.items():
+    print("{:<15}{:<15}".format(item, price))
+print("Total Amount = Rs.", amount)
+print("Maximum Price =", max(PRICES.values()))
+print("Minimum Price =", min(PRICES.values()))
+print("\nTHANKS FOR VISITING")
 
-dishes_cooked_in_week = {
-    'Spaghetti Bolognese',
-    'Chicken Alfredo',
-    'Margherita Pizza',
-    'Greek Salad',
-    'Fruit Salad',
-    'Chocolate Cake'
-}
-
-dishes_to_be_cooked = your_choice_dishes.intersection(dishes_cooked_in_week)
-
-print("Dishes to be cooked in the next week based on your choice:")
-for dish in dishes_to_be_cooked:
-    print(f"- {dish}")
-    
-    
