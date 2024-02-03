@@ -1,14 +1,17 @@
-best_students_set = set()
-for i in range(5):
-    student_name = input(f"Enter the name of the {i+1}st student: ")
-    best_students_set.add(student_name)
-print("Set of best five students:", best_students_set)
+import random
 
-for i in range(2):
-    friend_name = input("Enter the name of a friend who left NED: ")
-    if friend_name in best_students_set:
-        best_students_set.remove(friend_name)
-        print(f"{friend_name} has been removed.")
-    else:
-        print(f"{friend_name} is not in the set.")
-print("Updated set of best five students:", best_students_set)
+student_list = ['Aun', 'Enayat', 'Ahmer', 'Talha', 'Ahmed']
+a = []
+
+for i in range(5):
+    x = student_list.pop()
+    a.append(x)
+    if i == 4:
+        break
+
+print("Original List:", a)
+
+winning_students = random.sample(a, 2)
+print("Scholarship Winners:", winning_students)
+remaining_students = set(a) - set(winning_students)
+print("Remaining Students:", list(remaining_students))
